@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+/* Global resets */
+html, body, .app-container, .app-content {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+/* Main container for the app */
+.main-container {
+    position: relative;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Mapbox container */
+.mapbox {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* Color scale container */
+.color-scale-container {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    height: 30px;
+    display: flex;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+/* Style for each individual color block in the legend */
+.color-block {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    text-shadow: 0 5px 10px black, 0 0 2px black;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    height: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Add hover effect to make legend interactive */
+.color-block:hover {
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    cursor: pointer;
+}
+
+/* Highlight the selected legend item */
+.color-block.selected {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.color-block:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.color-block:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Style for the color scale labels */
+.color-scale-label {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    text-shadow: 0 0 1.5px black, 0 0 1.5px black, 0 0 1.5px black;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+
+.mapboxgl-ctrl-bottom-right .mapboxgl-ctrl-attrib {
+    display: none;
+}
+
+.mapboxgl-ctrl-bottom-left {
+    top: 0;
+    bottom: auto;
+}
+
+.mapboxgl-ctrl-bottom-left .mapboxgl-ctrl {
+    margin-top: 10px !important;
+}
