@@ -9,6 +9,7 @@ import plotly.express as px
 from dash import dcc, html, Output, Input
 from dotenv import load_dotenv
 from shapely.geometry import Polygon
+import plotly.io as pio
 
 load_dotenv()
 mapbox_token = os.getenv('MAPBOX_TOKEN')
